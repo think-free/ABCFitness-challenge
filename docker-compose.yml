@@ -1,0 +1,12 @@
+services:
+  # main app
+  abcfitness:
+    image: abcfitness
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      LOGLEVEL: "debug"
+      DBTYPE: "memory"
+    ports:
+      - "8080:8080"
